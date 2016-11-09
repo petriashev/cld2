@@ -41,7 +41,7 @@ namespace CLD2 {
 // In all cases, valid_prefix_bytes will be set to the number of leading
 // bytes that are valid UTF-8. If this is < buffer_length, there is invalid
 // input starting at the following byte.
-Language DetectLanguageCheckUTF8(
+DllExport Language DetectLanguageCheckUTF8(
                         const char* buffer,
                         int buffer_length,
                         bool is_plain_text,
@@ -56,7 +56,7 @@ Language DetectLanguageCheckUTF8(
 }
 
 // Scan interchange-valid UTF-8 bytes and detect most likely language
-Language DetectLanguage(
+DllExport Language DetectLanguage(
                           const char* buffer,
                           int buffer_length,
                           bool is_plain_text,
@@ -95,7 +95,7 @@ Language DetectLanguage(
 }
 
 // Scan interchange-valid UTF-8 bytes and detect list of top 3 languages.
-Language DetectLanguageSummary(
+DllExport Language DetectLanguageSummary(
                           const char* buffer,
                           int buffer_length,
                           bool is_plain_text,
@@ -314,7 +314,7 @@ Language ExtDetectLanguageSummary(
 // In all cases, valid_prefix_bytes will be set to the number of leading
 // bytes that are valid UTF-8. If this is < buffer_length, there is invalid
 // input starting at the following byte.
-Language ExtDetectLanguageSummaryCheckUTF8(
+DllExport Language ExtDetectLanguageSummaryCheckUTF8(
                         const char* buffer,
                         int buffer_length,
                         bool is_plain_text,
@@ -369,7 +369,7 @@ Language ExtDetectLanguageSummaryCheckUTF8(
 // spell-check, translate, or otherwaise process different parts of the input
 // buffer in language-dependant ways.
 //
-Language ExtDetectLanguageSummary(
+DllExport Language ExtDetectLanguageSummary(
                         const char* buffer,
                         int buffer_length,
                         bool is_plain_text,
